@@ -1,0 +1,50 @@
+import sys
+''''
+plik=open("dane.txt","w+")
+
+lista=[]
+for x in range(1,60):
+    if x%4 == 0:
+        lista += [x]
+
+plik.writelines(str(lista))
+plik.close()
+
+
+
+with open("dane.txt", "r") as plik:
+    for linia in plik:
+        print(linia, end="")
+
+with open("dane1.txt", "w+") as plik:
+    tekst = '\nAla ma kota i nie lubi mleka\n'
+    tekst2 = 'Harry Potter cz1, Harry Potter cz2, Harry Potter cz3\n'
+    plik.writelines(str(tekst))
+    plik.writelines(str(tekst2))
+
+with open("dane1.txt", "r") as plik:
+    for linia in plik:
+        print(linia, end="")
+'''''
+class naZakupy:
+    nazwaProduktu = ''
+    ilosc = ''
+    jednostkaMiary = ''
+    cenaJed = ''
+    def __init__(self, nazwaProduktu, ilosc, jednostkaMiary, cenaJed):
+        self.nazwaProduktu=nazwaProduktu
+        self.ilosc=ilosc
+        self.jednostkaMiary=jednostkaMiary
+        self.cenaJed=cenaJed
+    def wyswietlProdukt(self):
+        return(self.nazwaProduktu + ', ' + str(self.ilosc) + ', ' + self.jednostkaMiary  + ', ' + str(self.cenaJed))
+    def ileProduktu(self):
+        return(str(self.ilosc) + self.jednostkaMiary + '.')
+    def ileKosztuje(self):
+        return(str(self.cenaJed * self.ilosc) + ' zloty')
+
+
+biedronka = naZakupy('ziemniaki' , 3 , 'kg' , 2)
+print(biedronka.wyswietlProdukt())
+print(biedronka.ileProduktu())
+print(biedronka.ileKosztuje())
