@@ -58,6 +58,7 @@ class ciagi:
         self.r=r
         self.a1=a1
     def wyswietlDane(self):
+        return(self.an)
     def pobierzEelementy(self):
     def pobierzParametry(self):
     def policzSume(self):
