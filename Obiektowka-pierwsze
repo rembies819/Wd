@@ -53,13 +53,24 @@ class ciagi:
     an = []
     r = ''
     a1 = [1]
-    def __init__(self, an, r, a1):
+    n = ''
+    def __init__(self, an, r, a1,n):
         self.an=an
         self.r=r
         self.a1=a1
+        self.n=n
     def wyswietlDane(self):
         return(self.an)
     def pobierzEelementy(self):
     def pobierzParametry(self):
+        an = []
+        print("Podaj pierwsza wartosc")
+        a1 = sys.stdin.readline()
+        print("Podaj roznice")
+        r = sys.stdin.readline()
+        print("Podaj wielkosc ciagu")
+        n = sys.stdin.readline()
+        for x in range(a1, n, r):
+            an += [x]
     def policzSume(self):
     def policzElementy(self):
