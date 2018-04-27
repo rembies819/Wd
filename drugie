@@ -1,0 +1,49 @@
+import math
+import matplotlib.pyplot as plt
+import numpy as np
+
+x=np.linspace(-math.pi,math.pi,100)
+#1
+y=[]
+y1=[]
+y2=[]
+y3=[]
+for i in x:
+    a=math.sin(i)
+    y.append(a)
+plt.subplot(221)
+plt.plot(x,y)
+plt.subplots_adjust(hspace=0.5)
+plt.subplots_adjust(wspace=0.5)
+
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title("wykres funkcji sin(x)")
+
+for i in x:
+    a=math.sin(2*i)
+    y1.append(a)
+plt.subplot(222)
+plt.plot(x,y1,'r-')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title("wykres funkcji sin(2x)")
+
+for i in x:
+    a=math.sin(3*i)
+    y2.append(a)
+plt.subplot(223)
+plt.plot(x,y2,'ys-')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title("wykres funkcji sin(3x)")
+
+for i in x:
+    a=math.sin(4*i)
+    y3.append(a)
+plt.subplot(224)
+plt.plot(x,y3,'o-')
+plt.xlabel('x')
+plt.ylabel('y')
+
+plt.show()
